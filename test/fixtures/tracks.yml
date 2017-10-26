@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  release: 2017-10-26
+  description: MyText
+  download: MyString
+  embed: MyText
+  album: MyString
+  artist: MyString
+
+two:
+  title: MyString
+  release: 2017-10-26
+  description: MyText
+  download: MyString
+  embed: MyText
+  album: MyString
+  artist: MyString

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @track.title %>
+</p>
+
+<p>
+  <strong>Release:</strong>
+  <%= @track.release %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @track.description %>
+</p>
+
+<p>
+  <strong>Download:</strong>
+  <%= @track.download %>
+</p>
+
+<p>
+  <strong>Embed:</strong>
+  <%= @track.embed %>
+</p>
+
+<p>
+  <strong>Album:</strong>
+  <%= @track.album %>
+</p>
+
+<p>
+  <strong>Artist:</strong>
+  <%= @track.artist %>
+</p>
+
+<%= link_to 'Edit', edit_track_path(@track) %> |
+<%= link_to 'Back', tracks_path %>
