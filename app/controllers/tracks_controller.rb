@@ -1,5 +1,5 @@
 class TracksController < ApplicationController
-  http_basic_authenticate_with name: "nicolas", password: "dales"
+  
   before_action :set_track, only: [:show, :edit, :update, :destroy]
   before_action :set_album
 
