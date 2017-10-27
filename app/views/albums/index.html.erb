@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Albums</h1>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th>Title</th>
+      <th>Release</th>
+      <th>Producer</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @albums.each do |album| %>
+      <tr>
+        <td><%= album.title %></td>
+        <td><%= album.release %></td>
+        <td><%= album.producer %></td>
+        <td><%= link_to 'Show', album, class: 'btn btn-success btn-sm' %></td>
+        <td><%= link_to 'Edit', edit_album_path(album), class: 'btn btn-warning btn-sm' %></td>
+        <td><%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Album', new_album_path, class: 'btn btn-primary' %>

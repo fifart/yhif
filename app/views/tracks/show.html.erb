@@ -29,7 +29,7 @@
 
 <p>
   <strong>Album:</strong>
-  <%= @track.album %>
+  <%= @albums.find(@track.album_id).title %>
 </p>
 
 <p>
