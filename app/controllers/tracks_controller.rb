@@ -29,7 +29,8 @@ class TracksController < ApplicationController
 
     respond_to do |format|
       if @track.save
-        format.html { redirect_to @track, notice: 'Track was successfully created.' }
+        flash[:success] = 'Track was successfully created.'
+        format.html { redirect_to @track}
         format.json { render :show, status: :created, location: @track }
       else
         format.html { render :new }
@@ -43,7 +44,8 @@ class TracksController < ApplicationController
   def update
     respond_to do |format|
       if @track.update(track_params)
-        format.html { redirect_to @track, notice: 'Track was successfully updated.' }
+        flash[:success] = 'Track was successfully updated.'
+        format.html { redirect_to @track }
         format.json { render :show, status: :ok, location: @track }
       else
         format.html { render :edit }

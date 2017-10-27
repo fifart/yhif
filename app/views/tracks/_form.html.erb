@@ -1,52 +1,23 @@
-<%= form_with(model: track, local: true) do |form| %>
-  <% if track.errors.any? %>
-    <div id="error_explanation">
+<%= simple_form_for(@track, html: { class: 'form-horizontal' }) do |f| %>
+  <% if @track.errors.any? %>
+    <div class="alert alert-danger" role="alert">
       <h2><%= pluralize(track.errors.count, "error") %> prohibited this track from being saved:</h2>
 
       <ul>
-      <% track.errors.full_messages.each do |message| %>
+      <% @track.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
-
-  <div class="form-group">
-    <%= form.label :title %>
-    <%= form.text_field :title, id: :track_title %>
-  </div>
-
-  <div class="form-group">
-    <%= form.label :release %>
-    <%= form.date_select :release, id: :track_release %>
-  </div>
-
-  <div class="form-group">
-    <%= form.label :description %>
-    <%= form.text_area :description, id: :track_description %>
-  </div>
-
-  <div class="form-group">
-    <%= form.label :download %>
-    <%= form.text_field :download, id: :track_download %>
-  </div>
-
-  <div class="form-group">
-    <%= form.label :embed %>
-    <%= form.text_area :embed, id: :track_embed %>
-  </div>
-
-  <div class="form-group">
-    <%= form.label :album %>
-    <%= form.text_field :album, id: :track_album %>
-  </div>
-
-  <div class="form-group">
-    <%= form.label :artist %>
-    <%= form.text_field :artist, id: :track_artist %>
-  </div>
-
-  <div class="btn btn-primary">
-    <%= form.submit %>
-  </div>
+  
+  <%= f.input :title %>
+  <%= f.input :release %>
+  <%= f.input :description %>
+  <%= f.input :download %>
+  <%= f.input :embed %>
+  <%= f.input :album %>
+  <%= f.input :artist %>
+  <%= f.button :submit, class: 'btn btn-sm btn-primary' %>
+  
 <% end %>
