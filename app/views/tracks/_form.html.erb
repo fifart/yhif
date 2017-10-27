@@ -11,42 +11,42 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :title %>
     <%= form.text_field :title, id: :track_title %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :release %>
     <%= form.date_select :release, id: :track_release %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :description %>
     <%= form.text_area :description, id: :track_description %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :download %>
     <%= form.text_field :download, id: :track_download %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :embed %>
     <%= form.text_area :embed, id: :track_embed %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :album %>
     <%= form.text_field :album, id: :track_album %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :artist %>
     <%= form.text_field :artist, id: :track_artist %>
   </div>
 
-  <div class="actions">
+  <div class="btn btn-primary">
     <%= form.submit %>
   </div>
 <% end %>
