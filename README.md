@@ -1,24 +1,13 @@
-# README
+# You Hear It 1st
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Demo Developing App
 
-Things you may want to cover:
+Things we wish to develop:
 
-* Ruby version
+* Full Music Album / Track / Artist / Producer List
 
-* System dependencies
+* User Interface Installation  
 
-* Configuration
+* Authorization System
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* SuperAdmin Panel
