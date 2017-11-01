@@ -89,7 +89,7 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
   
-  config.action_mailer.default_url_options = { host: 'https://yhif.herokuapp.com/', port: 8080}
+  config.action_mailer.default_url_options = { host: 'https://yhif.herokuapp.com/'}
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
       address:              'smtp.gmail.com',
@@ -100,5 +100,7 @@ Rails.application.configure do
       authentication:       'login',
       enable_starttls_auto: true  
   }
+  
+  Rails.application.routes.default_url_options[:host] = 'yhif.herokuapp.com'
   
 end
