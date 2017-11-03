@@ -16,7 +16,7 @@ class TracksController < ApplicationController
 
   # GET /tracks/new
   def new
-    @track = Track.new
+    @track = current_user.tracks.build
   end
 
   # GET /tracks/1/edit
@@ -26,7 +26,7 @@ class TracksController < ApplicationController
   # POST /tracks
   # POST /tracks.json
   def create
-    @track = Track.new(track_params)
+    @track = current_user.tracks.build(track_params)
     respond_to do |format|
       if @track.save
         flash[:success] = 'Track was successfully created.'
