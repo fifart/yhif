@@ -37,17 +37,23 @@
         </ul>
         <% end %>
         <% if user_signed_in? %>
-        
-          <%= link_to 'My Profile', edit_user_registration_path, class:'btn btn-sm align-middle btn-outline-success' %> | 
-          <%= link_to 'Log Out', destroy_user_session_path, method: :delete, class:'btn btn-sm align-middle btn-outline-secondary' %>
-     
+          <ul class="nav nav-pills">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Welcome <%= current_user.username %></a>
+            <div class="dropdown-menu">
+              <%= link_to 'My Profile', edit_user_registration_path, class: 'dropdown-item' %>
+              <div class="dropdown-divider"></div>
+              <%= link_to 'Log Out', destroy_user_session_path, method: :delete, class: 'dropdown-item' %>
+            </div>
+          </li>
+          </ul>
           <% else %>
         
           <%= link_to 'Log In', new_user_session_path, class:'btn btn-sm align-middle btn-outline-secondary' %> | 
           <%= link_to 'Sign Up', new_user_registration_path, class:'btn btn-sm align-middle btn-outline-primary' %>
         
         <% end %>
-        | <%= link_to 'Email Us', contacts_path, class:'btn btn-sm align-middle btn-info' %>
+        | <%= link_to 'Email Us', contacts_path, class:'btn btn-sm align-middle btn-warning' %>
       </div>
     </nav>
       <%= yield %>
