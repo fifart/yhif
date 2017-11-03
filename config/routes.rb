@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources 'contacts', only: [:new, :create], path_names: { new: '' }
+  
   devise_for :users
   get 'pages/index'
 
